@@ -13,7 +13,7 @@ Route::get('/video/{filename}', function ($filename) {
 
     if (file_exists($filePath = $videosDir."/".$filename)) {
         $stream = new \App\Http\VideoStream($filePath);
-
+        
         return response()->stream(function() use ($stream) {
             $stream->start();
         });

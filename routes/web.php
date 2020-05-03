@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'HomeViewController@index');
 Route::get('/news/{detail_news}', 'HomeViewController@detail_news');
 Route::get('/blogs/detail/{detail_blog}', 'HomeViewController@detail_blog');
-
+Route::get('/test', 'HomeViewController@test');
 
 Route::get('/blogs/', 'BlogController@index');
 Route::resource('blogs', 'BlogController');

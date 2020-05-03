@@ -16,6 +16,15 @@ class HomeViewController extends Controller
         ]);
     }
 
+
+    public function test() {
+    //        $tournaments = App\Tournaments::all();
+        $news = App\News::all();
+        $blogs = App\Blog::all();
+        return view('test');
+    }
+
+
     public function detail_news($id) {
         $detail_news = App\News::find($id);
         return view('detail_news', ['detail_news' => $detail_news]);
